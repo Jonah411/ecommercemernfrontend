@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import { useGetMenusQuery } from "../../feature/profileReducer/authProfile";
-import { useSelector } from "react-redux";
-import { getLoginDetails } from "../../feature/loginReducer/loginReducer";
 
 const ShowMenu = ({ menuList }) => {
   const [show, setShow] = useState(false);
-  const user = useSelector(getLoginDetails);
-  const { data, error, isLoading } = useGetMenusQuery(menuList?._id, {
-    refetchOnMountOrArgChange: true,
-    skip: false,
-  });
+  //const user = useSelector(getLoginDetails);
+  // const { data, error, isLoading } = useGetMenusQuery(menuList?._id, {
+  //   refetchOnMountOrArgChange: true,
+  //   skip: false,
+  // });
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [menu, setMenu] = useState(menuList);

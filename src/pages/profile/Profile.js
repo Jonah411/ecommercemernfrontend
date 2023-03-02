@@ -16,17 +16,9 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  useNavigate,
-} from "react-router-dom";
-import Home from "../Home";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { getLoginDetails } from "../../feature/loginReducer/loginReducer";
 import { useGetMenusQuery } from "../../feature/profileReducer/authProfile";

@@ -5,12 +5,7 @@ import { AiFillEye } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import TextField from "@mui/material/TextField";
 import Stack from "@mui/material/Stack";
-import AddCategories from "../components/categories/AddCategories";
-import {
-  useGetAllProductsQuery,
-  useGetCategoriesQuery,
-  useGetProductsQuery,
-} from "../feature/profileReducer/authProfile";
+import { useGetAllProductsQuery } from "../feature/profileReducer/authProfile";
 import { BASE_URL } from "../constants/ConstaltsVariables";
 import AddProduct from "../components/products/AddProduct";
 

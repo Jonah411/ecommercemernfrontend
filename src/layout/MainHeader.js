@@ -1,18 +1,12 @@
 import * as React from "react";
-import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import InputBase from "@mui/material/InputBase";
-import Badge from "@mui/material/Badge";
+
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import LoginIcon from "@mui/icons-material/Login";
 import HowToRegIcon from "@mui/icons-material/HowToReg";
@@ -23,8 +17,6 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   getAddCartDetails,
   getLoginDetails,
-  getLoginDetailsToken,
-  getLoginDetailsUser,
   logoutDetails,
 } from "../feature/loginReducer/loginReducer";
 import Navbar from "./Navbar";

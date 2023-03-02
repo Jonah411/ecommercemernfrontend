@@ -21,11 +21,7 @@ import { BASE_URL } from "../constants/ConstaltsVariables";
 import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
-  const {
-    data: parentData,
-    error,
-    isLoading,
-  } = useGetParentCategoriesQuery("data", {
+  const { data: parentData } = useGetParentCategoriesQuery("data", {
     refetchOnMountOrArgChange: true,
     skip: false,
   });

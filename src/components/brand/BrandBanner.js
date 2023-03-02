@@ -1,23 +1,12 @@
 import React, { useEffect, useState } from "react";
 import DataTable from "react-data-table-component";
-import { FiEdit2 } from "react-icons/fi";
-import { AiFillEye } from "react-icons/ai";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import TextField from "@mui/material/TextField";
-import Stack from "@mui/material/Stack";
-import { toast } from "react-toastify";
 import AlertToast from "../common/AlertToast";
-import {
-  useAddBrandMutation,
-  useGetAllBannerQuery,
-  useGetParentCategoriesQuery,
-} from "../../feature/profileReducer/authProfile";
-import SwitchPage from "../common/SwitchPage";
+import { useGetAllBannerQuery } from "../../feature/profileReducer/authProfile";
 import { BASE_URL } from "../../constants/ConstaltsVariables";
-import { useNavigate } from "react-router-dom";
 import UpdateBanner from "./UpdateBanner";
 
 const style = {
@@ -33,7 +22,6 @@ const style = {
 };
 
 const BrandBanner = () => {
-  const navigate = useNavigate();
   const { data: bannerData } = useGetAllBannerQuery(undefined, {
     refetchOnMountOrArgChange: true,
     skip: false,

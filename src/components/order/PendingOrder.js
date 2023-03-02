@@ -2,12 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { getLoginDetails } from "../../feature/loginReducer/loginReducer";
 import { useGetOrderQuery } from "../../feature/profileReducer/authProfile";
-import { AiFillEye, AiOutlineCloseCircle } from "react-icons/ai";
 import DataTable from "react-data-table-component";
 import { BASE_URL } from "../../constants/ConstaltsVariables";
 import { useNavigate } from "react-router-dom";
 import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 
 const PendingOrder = () => {

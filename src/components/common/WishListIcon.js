@@ -3,7 +3,6 @@ import { styled } from "@mui/material/styles";
 import { GrFavorite } from "react-icons/gr";
 import { MdFavorite } from "react-icons/md";
 import ButtonBase from "@mui/material/ButtonBase";
-import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import { BASE_URL } from "../../constants/ConstaltsVariables";
 import { Button } from "@mui/material";
@@ -12,10 +11,7 @@ import {
   getLoginDetails,
   getLoginDetailsToken,
 } from "../../feature/loginReducer/loginReducer";
-import {
-  useAddWishListMutation,
-  useGetWishListQuery,
-} from "../../feature/profileReducer/authProfile";
+import { useAddWishListMutation } from "../../feature/profileReducer/authProfile";
 import { useNavigate } from "react-router-dom";
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({

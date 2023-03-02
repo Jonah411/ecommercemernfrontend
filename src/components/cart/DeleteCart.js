@@ -5,11 +5,10 @@ import { getLoginDetails } from "../../feature/loginReducer/loginReducer";
 import { useDeleteCartMutation } from "../../feature/profileReducer/authProfile";
 import { toast } from "react-toastify";
 
-const DeleteCart = ({ cartData, productIndex }) => {
+const DeleteCart = ({ cartData }) => {
   const user = useSelector(getLoginDetails);
   const navigate = useNavigate();
-  const [deleteCart, { data, error, isSuccess, isError }] =
-    useDeleteCartMutation();
+  const [deleteCart, { data, isSuccess }] = useDeleteCartMutation();
   const deleteCartList = (cartData) => {
     let deleteId = {
       productid: cartData,

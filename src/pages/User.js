@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { AiFillEye, AiOutlineCloseCircle } from "react-icons/ai";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 import DataTable from "react-data-table-component";
 import { useNavigate } from "react-router-dom";
 import TextField from "@mui/material/TextField";
@@ -8,13 +7,11 @@ import { toast } from "react-toastify";
 import Stack from "@mui/material/Stack";
 import Avatar from "@mui/material/Avatar";
 import {
-  useChangeRollMutation,
   useGetAllUsersQuery,
   useRemoveUserMutation,
 } from "../feature/profileReducer/authProfile";
 import { BASE_URL } from "../constants/ConstaltsVariables";
 import AlertToast from "../components/common/AlertToast";
-import ShowMenu from "../components/user/ShowMenu";
 import Menu from "../components/user/Menu";
 import ChangeRoll from "../components/user/ChangeRoll";
 

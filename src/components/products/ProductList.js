@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Card from "@mui/material/Card";
-import { Button, CardActionArea, CardActions } from "@mui/material";
+import { CardActionArea, CardActions } from "@mui/material";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
 import { useNavigate } from "react-router-dom";
-import { BASE_URL } from "../../constants/ConstaltsVariables";
 import WishListIcon from "../common/WishListIcon";
 import AddCart from "../common/AddCart";
 import BuyCart from "../common/BuyCart";

@@ -7,10 +7,7 @@ import TextField from "@mui/material/TextField";
 import Stack from "@mui/material/Stack";
 import { toast } from "react-toastify";
 import AlertToast from "../common/AlertToast";
-import {
-  useAddBrandMutation,
-  useGetParentCategoriesQuery,
-} from "../../feature/profileReducer/authProfile";
+import { useAddBrandMutation } from "../../feature/profileReducer/authProfile";
 import SwitchPage from "../common/SwitchPage";
 
 const style = {
@@ -27,10 +24,10 @@ const style = {
 
 const AddBrand = () => {
   const [addBrand, { data, error, isSuccess, isError }] = useAddBrandMutation();
-  const { data: parentData } = useGetParentCategoriesQuery("data", {
-    refetchOnMountOrArgChange: true,
-    skip: false,
-  });
+  // const { data: parentData } = useGetParentCategoriesQuery("data", {
+  //   refetchOnMountOrArgChange: true,
+  //   skip: false,
+  // });
 
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);

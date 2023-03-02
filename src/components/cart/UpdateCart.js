@@ -10,8 +10,7 @@ import { useNavigate } from "react-router-dom";
 const UpdateCart = ({ product, quantity, totalChange }) => {
   const user = useSelector(getLoginDetails);
   const navigate = useNavigate();
-  const [updateCart, { data, error, isSuccess, isError }] =
-    useUpdateCartMutation();
+  const [updateCart, { data, isSuccess }] = useUpdateCartMutation();
 
   const handleUpdate = () => {
     let data = {

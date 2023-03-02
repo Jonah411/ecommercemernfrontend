@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 
 function Register() {
   const navigate = useNavigate();
-  const [authRegister, { data, error, isSuccess, isError }] =
+  const [authRegister, { data, isSuccess, isError }] =
     useAuthRegisterMutation();
   const init = {
     first_name: "",

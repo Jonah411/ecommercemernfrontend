@@ -1,22 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Button from "@mui/material/Button";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addCartDetails,
-  getAddCartDetails,
   getLoginDetails,
 } from "../../feature/loginReducer/loginReducer";
 import { toast } from "react-toastify";
 import { useAddCartListMutation } from "../../feature/profileReducer/authProfile";
 import AlertToast from "./AlertToast";
-import { useNavigate } from "react-router-dom";
 
 const AddCart = ({ productId }) => {
   const user = useSelector(getLoginDetails);
-  const cardData = useSelector(getAddCartDetails);
-  const navigate = useNavigate();
-  const [addCartList, { data, error, isSuccess, isError }] =
-    useAddCartListMutation();
+  const [addCartList, { data, isSuccess }] = useAddCartListMutation();
   const dispatch = useDispatch();
   const cartList = {
     user: user ? user?.id : null,

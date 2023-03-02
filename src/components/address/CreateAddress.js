@@ -9,8 +9,7 @@ import AlertToast from "../common/AlertToast";
 const CreateAddress = () => {
   const user = useSelector(getLoginDetails);
   const navigate = useNavigate();
-  const [addAddress, { data, error, isSuccess, isError }] =
-    useAddAddressMutation();
+  const [addAddress, { isSuccess, isError }] = useAddAddressMutation();
   const init = {
     name: "",
     street: "",

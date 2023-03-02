@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
-import Banner1 from "../../assets/banner/banner1.jpg";
-import Banner2 from "../../assets/banner/banner2.jpg";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import ButtonBase from "@mui/material/ButtonBase";

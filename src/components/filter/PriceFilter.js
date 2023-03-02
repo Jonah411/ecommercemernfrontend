@@ -5,14 +5,12 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { useGetAllProductsQuery } from "../../feature/profileReducer/authProfile";
 import { useDispatch, useSelector } from "react-redux";
 
 import {
   getSearchProductDetails,
   hideProductDetails,
   priceProductDetails,
-  searchProductDetails,
 } from "../../feature/loginReducer/loginReducer";
 import { useNavigate } from "react-router-dom";
 
