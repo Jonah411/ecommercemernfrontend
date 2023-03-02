@@ -1,6 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { BASE_URL } from "../../constants/ConstaltsVariables";
-import { logoutDetails } from "./loginReducer";
+import { BASE_URL } from "../../../../client/src/constants/ConstaltsVariables";
 
 const baseQuery = fetchBaseQuery({
   baseUrl: `${BASE_URL}`,
@@ -17,21 +16,16 @@ const baseQuery = fetchBaseQuery({
 
 const baseQueryWithReauth = async (args, api, extraOptions) => {
   let result = await baseQuery(args, api, extraOptions);
-  //console.log(result);
-  // if (result?.error?.status === 401) {
+  console.log(result?.error);
+  // if (result?.error?.originalStatus === 401) {
   //   console.log("sending refresh token");
-  //   const token = api.getState().ecommerceadmin.token;
-  //   console.log(token);
-  //   const refreshResult = await baseQuery(
-  //     `api/users/${token}`,
-  //     api,
-  //     extraOptions
-  //   );
+
+  //   const refreshResult = await baseQuery("/refresh", api, extraOptions);
   //   console.log(refreshResult);
   //   if (refreshResult?.data) {
   //     const user = api.getState().auth.user;
 
-  //     api.dispatch(logoutDetails({ ...refreshResult.data, user }));
+  //     api.dispatch(loginDetails({ ...refreshResult.data, user }));
 
   //     result = await baseQuery(args, api, extraOptions);
   //   } else {
